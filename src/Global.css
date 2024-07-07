@@ -9,16 +9,25 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
+nav {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
 .head {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(./assets/image/main-image-2.jpg);
+  padding: 80px 0px;
+  /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+  background: linear-gradient(rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/image/web.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
 }
+.button {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+}
 .text-main {
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,7 +71,10 @@ h5 {
 .mycard:hover::before img {
   filter: blur(4px);
 }
-
+.mycard img {
+  width: 100%;
+  height: 250px !important;
+}
 .about {
   background-color: black;
 }
@@ -277,4 +289,9 @@ h5 {
   left: 0;
   position: absolute;
   width: 110%;
+}
+@media (max-width: 766px) {
+  .head {
+    padding: 25px 10px;
+  }
 }

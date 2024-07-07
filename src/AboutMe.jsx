@@ -4,7 +4,7 @@ const Skill = ({ name, percent, color }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setWidth(percent);
-    }, 100); // Delay to ensure smooth transition
+    }, 1000); // Delay to ensure smooth transition
 
     return () => clearTimeout(timer);
   }, [percent]);
@@ -26,22 +26,22 @@ const AboutMe = () => {
     <div className="about text-light pb-5" id="aboutme">
       <div className="container pt-4" data-aos="fade-up">
         <h2 className="text-capitalize text-center">about me</h2>
-        <div className="row bg-black main p-3 rounded-3">
-          <div className="col-md-6 d-flex justify-content-center">
-            <img
-              src="./image/resume (2).jfif"
+        <div className="row bg-black main p-3 rounded-3 d-flex align-items-center flex-column justify-content-center">
+          <div className=" d-flex justify-content-center">
+            {/* <img
+              src="/src/assets/image/about-me.png"
               alt=""
-              className="rounded personal-image"
-            />
+              className="rounded personal-image img-fluid"
+            /> */}
           </div>
-          <div className="col-md-6">
-            <div className="fs-2 text-capitalize mt-2">
+          <div className="col-12 col-md-6 text-center md-w-100">
+            <div className="fs-2 text-capitalize mt-2 text-center">
               <p>
                 Hi, I am <span className="text-danger">Prawesh</span>, nice to
                 meet you!
               </p>
             </div>
-            <div className="moreabout">
+            <div className="moreabout text-center">
               <p>
                 In recent years my focus has been on{" "}
                 <span className="fs-3 text-capitalize">

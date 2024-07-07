@@ -37,7 +37,7 @@ function App() {
           }
         />
         <Route path="/blog" element={<List />} />
-        <Route path="/article/:name" element={<SinglePage />} />
+        <Route path="/blog/:name" element={<SinglePage />} />
       </Routes>
       <Footer />
     </div>

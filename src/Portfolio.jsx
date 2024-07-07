@@ -10,42 +10,42 @@ const portfolioItems = [
   {
     title: "2. Calculator App",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: "/src/assets/image/calculator.jpg",
     link: "https://jhapraweshcalculator.netlify.app",
   },
   {
     title: "3. Quiz App",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: "/src/assets/image/Tech-Business-2.webp",
     link: "https://jhapraweshquizapp.netlify.app",
   },
   {
     title: "4. Portfolio App",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: "/src/assets/image/new--.jpg",
     link: "https://jhaprawesh.netlify.app",
   },
   {
     title: "5. ID Generator App",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: "/src/assets/image/main-image.jpg",
     link: "https://jhapraweshapi.netlify.app",
   },
   {
     title: "6. Weather App",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: "/src/assets/image/wheather.jpg",
     link: "https://jhaweather.netlify.app",
   },
 ];
 
 const PortfolioCard = ({ title, image, link }) => {
   return (
-    <div className="mycard col-md-4 position-relative overflow-hidden">
+    <div className="mycard col-md-4 position-relative overflow-hidden ">
       <img
         src={image}
         alt={title}
-        className="img-thumbnail h-100"
+        className="img-thumbnail"
         style={{ objectFit: "cover" }}
       />
       <div className="overlay position-absolute top-0 start-0 bottom-0 end-0 text-white text-center w-100 h-100">
@@ -68,11 +68,10 @@ const Portfolio = () => {
   return (
     <div className="container">
       <div className="portfolio mb-4" id="portfolio">
-        <div className="text-center">
-          <h2>Portfolio</h2>
-          <span>My Portfolio</span>
+        <div className="text-center mb-5">
+          <h2>Project's</h2>
         </div>
-        <div className="row h-50" data-aos="fade-up">
+        <div className="row h-50 row-gap-5" data-aos="fade-up">
           {portfolioItems.map((item, index) => (
             <PortfolioCard key={index} {...item} />
           ))}

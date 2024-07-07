@@ -4,14 +4,15 @@ const currentDate = new Date().toLocaleDateString("en-US", {
   day: "numeric",
 });
 
-const articles = [
+const blog = [
   {
-    name: "about",
-    title: "Cuteblog React",
+    id: 0,
+    name: "types-of-blogs-that-you",
+    title: "Top 21 Types of Blogs that You can Create Today",
     date: currentDate,
-    desc: "about cute blog for react js",
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    desc: "",
+    author: "Prawesh Jha",
+    authorlink: "https://www.linkedin.com/in/prawesh-jha-54ab98215/",
     img: "https://cdn.dribbble.com/users/77598/screenshots/5919494/dribbble.png",
     content: [
       `Cuteblog for react is designed specially for react js, so with this source code project or free template themes for react make you fast and easy to build modern blogging website using react js and cuteblog.`,
@@ -22,12 +23,14 @@ const articles = [
     ],
   },
   {
+    id: 1,
     name: "gatsby-js",
     title: "Gatsby JS",
     desc: "Cuteblog for Gatsby with react JS",
-    date: "currentDate",
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    date: currentDate,
+    desc: "",
+    author: "Prawesh Jha",
+    authorlink: "https://www.linkedin.com/in/prawesh-jha-54ab98215/",
     img: "https://media.istockphoto.com/vectors/business-communication-internet-blogging-post-flat-design-vector-vector-id1143088863?k=20&m=1143088863&s=612x612&w=0&h=kJgOoz9QAhbT83Acyhm9whRtxt2j7J7VzWAxCHuEa8o=",
     content: [
       `If you love gatsby js so stay tuned.. next we develope cuteblog to using gatsby js, of course same concept and design with cuteblog.`,
@@ -37,9 +40,10 @@ const articles = [
   {
     name: "installation",
     title: "Install",
-    date: "currentDate",
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    date: currentDate,
+    desc: "",
+    author: "Prawesh Jha",
+    authorlink: "https://www.linkedin.com/in/prawesh-jha-54ab98215/",
     img: "https://thumbs.dreamstime.com/b/flat-design-business-process-workflow-management-communicating-ready-to-animation-characters-compouse-your-scenes-office-work-128992317.jpg",
     desc: "How to install cuteblog react ",
     content: [
@@ -51,9 +55,10 @@ const articles = [
   {
     name: "work",
     title: "Work",
-    date: "currentDate",
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    date: currentDate,
+    desc: "",
+    author: "Prawesh Jha",
+    authorlink: "https://www.linkedin.com/in/prawesh-jha-54ab98215/",
     img: "https://img.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg?w=2000",
     desc: "How to work with cuteblog react",
     content: [
@@ -64,9 +69,10 @@ const articles = [
   {
     name: "deploy",
     title: "Deploy",
-    date: "currentDate",
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    date: currentDate,
+    desc: "",
+    author: "Prawesh Jha",
+    authorlink: "https://www.linkedin.com/in/prawesh-jha-54ab98215/",
     img: "https://img.freepik.com/free-vector/people-putting-puzzle-pieces-together_52683-28610.jpg?w=2000",
     desc: "How to deploy on static hosting or shared cloud hosting",
     content: [
@@ -76,32 +82,11 @@ const articles = [
     ],
   },
   {
-    name: "alternative",
-    title: "Alternative",
-    date: currentDate,
-    author: "currentDate",
-    authorlink: "https://website.axcora.com",
-    img: "https://appedology.pk/wp-content/uploads/2020/11/6be369b11b50e0b1c3a2fea19ba7e2ba.png",
-    desc: "Use static site generator with cuteblog",
-    content: [
-      `If you need to build and develope cuteblog project with static site generator , of course you can do it... we have develope cuteblog for jekyll, eleventy 11ty and astro, just visit on our github repo and search cuteblog with generator static site download it then run and deploy on hosting.`,
-      `You can visit on our blog for download all source code project, just visit on https://www.hockeycomputindo.com/2010/12/blog-post.html`,
-      `Cuteblog for jekyll`,
-      `https://www.hockeycomputindo.com/2022/04/auto-seo-dengan-cuteblog-for-jekyll.html`,
-      `Cuteblog for eleventy`,
-      `https://www.hockeycomputindo.com/2022/04/cuteblog-11ty-for-eleventy-generator.html`,
-      `Cuteblog for astro`,
-      `https://www.hockeycomputindo.com/2022/04/cute-blog-astro-generator-static-site.html`,
-      `Cuteblog for pico cms`,
-      `https://www.hockeycomputindo.com/2022/04/tema-blog-website-terbaru-dan-gratis.html`,
-    ],
-  },
-  {
     name: "cms",
     title: "Cuteblog CMS",
     date: currentDate,
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    desc: "",
+    author: "Prawesh Jha",
     img: "https://img.freepik.com/free-vector/group-people-working-together_52683-28615.jpg?w=2000",
     desc: "If you need build cuteblog with backend admin area so use cuteblog webapp",
     content: [
@@ -114,8 +99,8 @@ const articles = [
     name: "cloud",
     title: "Cloud with Us",
     date: currentDate,
-    author: "axcora",
-    authorlink: "https://website.axcora.com",
+    desc: "",
+    author: "Prawesh Jha",
     img: "https://media.istockphoto.com/vectors/multimedia-content-upload-interface-vector-id1299267805?k=20&m=1299267805&s=612x612&w=0&h=h2TKY77Vcd2144vvjYZbn2eTQr6XoHxDLPMKvI4jU7Q=",
     desc: "Create and build your modern website with us for best solutions",
     content: [
@@ -127,41 +112,6 @@ const articles = [
       `Email : axcora@gmail.com`,
     ],
   },
-  {
-    name: "blockchain-revolution",
-    title: "Blockchain: The Revolution of Digital Trust",
-    desc: "Exploring the transformative impact of blockchain technology on various industries.",
-    img: "path-to-image.jpg", // Update this with the path to your image
-    author: "Your Name",
-    authorlink: "https://your-author-link.com",
-    date: currentDate,
-    content: [
-      "<p style='font-size: 16px;'>In recent years, blockchain technology has emerged as a groundbreaking innovation with the potential to revolutionize various industries. This blog explores what blockchain is, how it works, and its transformative impact on sectors such as finance, supply chain, healthcare, and beyond.</p>",
-      "<h2 style='color: #2c3e50;'>What is Blockchain?</h2>",
-      "<p style='font-size: 16px;'>At its core, a blockchain is a decentralized digital ledger that records transactions across multiple computers in a way that ensures the security, transparency, and immutability of the data. Unlike traditional databases, where data is stored in a single location, blockchain distributes information across a network of nodes, making it tamper-resistant and resilient against failures or attacks.</p>",
-      "<h2 style='color: #2c3e50;'>How Does Blockchain Work?</h2>",
-      "<p style='font-size: 16px;'>1. <strong>Decentralization</strong>: Traditional databases are controlled by a central authority. In contrast, a blockchain is decentralized, with no single point of control. Each participant (or node) in the network has a copy of the entire blockchain, ensuring transparency and reducing the risk of data manipulation.</p>",
-      "<p style='font-size: 16px;'>2. <strong>Consensus Mechanisms</strong>: To validate and record transactions, blockchain relies on consensus mechanisms such as Proof of Work (PoW) or Proof of Stake (PoS). These mechanisms ensure that all participants agree on the validity of transactions, maintaining the integrity of the blockchain.</p>",
-      "<p style='font-size: 16px;'>3. <strong>Cryptographic Security</strong>: Blockchain uses cryptographic algorithms to secure data. Each block in the chain contains a cryptographic hash of the previous block, along with transaction data and a timestamp. This interlinking of blocks makes it virtually impossible to alter data without detection.</p>",
-      "<p style='font-size: 16px;'>4. <strong>Immutability</strong>: Once a transaction is recorded in a block and added to the blockchain, it cannot be altered or deleted. This immutability ensures a reliable and verifiable history of transactions.</p>",
-      "<h2 style='color: #2c3e50;'>Transformative Impact of Blockchain</h2>",
-      "<h3 style='color: #34495e;'>1. Finance</h3>",
-      "<p style='font-size: 16px;'>Blockchain technology underpins cryptocurrencies like Bitcoin and Ethereum, enabling peer-to-peer digital transactions without intermediaries. Beyond cryptocurrencies, blockchain facilitates faster, cheaper, and more transparent cross-border payments. Smart contracts—self-executing contracts with the terms of the agreement directly written into code—automate and streamline various financial processes, reducing the need for intermediaries.</p>",
-      "<h3 style='color: #34495e;'>2. Supply Chain Management</h3>",
-      "<p style='font-size: 16px;'>In supply chains, blockchain enhances transparency and traceability. By recording every step of the supply chain on a blockchain, companies can verify the origin, authenticity, and journey of products. This transparency helps in combating counterfeiting, ensuring ethical sourcing, and improving efficiency.</p>",
-      "<h3 style='color: #34495e;'>3. Healthcare</h3>",
-      "<p style='font-size: 16px;'>Blockchain holds promise in healthcare by securely managing patient data, ensuring data integrity, and enhancing interoperability among healthcare providers. Patients can have greater control over their medical records, and data sharing among institutions can be streamlined while maintaining privacy and security.</p>",
-      "<h3 style='color: #34495e;'>4. Real Estate</h3>",
-      "<p style='font-size: 16px;'>In the real estate sector, blockchain simplifies property transactions by reducing paperwork and increasing transparency. Smart contracts can automate the execution of agreements, such as rental leases and property sales, reducing the need for intermediaries and minimizing fraud.</p>",
-      "<h3 style='color: #34495e;'>5. Voting Systems</h3>",
-      "<p style='font-size: 16px;'>Blockchain technology offers a secure and transparent solution for voting systems. By recording votes on a blockchain, the integrity of the electoral process can be ensured, reducing the risk of tampering and increasing voter confidence.</p>",
-      "<h2 style='color: #2c3e50;'>Challenges and Future Prospects</h2>",
-      "<p style='font-size: 16px;'>While blockchain technology holds immense potential, it is not without challenges. Scalability remains a significant issue, as current blockchain networks struggle to handle large volumes of transactions quickly. Additionally, regulatory and legal considerations need to be addressed to ensure widespread adoption.</p>",
-      "<p style='font-size: 16px;'>The future of blockchain lies in continued innovation and collaboration. As technology evolves, solutions such as Layer 2 scaling and interoperability between different blockchain networks are being developed to address current limitations.</p>",
-      "<h2 style='color: #2c3e50;'>Conclusion</h2>",
-      "<p style='font-size: 16px;'>Blockchain technology represents a paradigm shift in how we manage and secure digital transactions. Its decentralized, transparent, and immutable nature has the potential to transform various industries, fostering trust and efficiency in ways previously unimaginable. As we move forward, embracing and addressing the challenges of blockchain will be key to unlocking its full potential and creating a more secure and transparent digital future.</p>",
-    ],
-  },
 ];
 
-export default articles;
+export default blog;
