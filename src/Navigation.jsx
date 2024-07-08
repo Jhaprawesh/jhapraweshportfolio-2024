@@ -3,8 +3,8 @@ import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
 
 const Navigation = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const handleClose = () => setShowOffcanvas(true);
-  const handleShow = () => setShowOffcanvas(false);
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
 
   return (
     <nav className="navbar navbar-expand-lg" id="navbar_top">
