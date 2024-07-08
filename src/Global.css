@@ -89,6 +89,18 @@ h5 {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-delay: 0.3ms;
 }
+.app {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+.app.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
 
 .personal-image {
   width: 301px;

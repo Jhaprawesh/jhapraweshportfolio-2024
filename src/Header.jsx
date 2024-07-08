@@ -1,6 +1,42 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const words = ["HTML", "CSS", "JavaScript", "React"];
+  const [index, setIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    const word = words[index];
+    let timer;
+
+    if (isTyping) {
+      // Typing effect
+      if (displayedText.length < word.length) {
+        timer = setTimeout(() => {
+          setDisplayedText(word.substring(0, displayedText.length + 1));
+        }, 250);
+      } else {
+        // Pause before starting to delete
+        setIsTyping(false);
+        timer = setTimeout(() => {}, 500);
+      }
+    } else {
+      // Deleting effect
+      if (displayedText.length > 0) {
+        timer = setTimeout(() => {
+          setDisplayedText(word.substring(0, displayedText.length - 1));
+        }, 150);
+      } else {
+        // Move to the next word
+        setIsTyping(true);
+        setIndex((prevIndex) => (prevIndex + 1) % words.length);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayedText, isTyping, index, words]);
   return (
     <div className="head position-relative">
       <div className="container">
@@ -8,7 +44,9 @@ const Header = () => {
           <div className="col-md-6">
             <div className="text-white d-grid gap-4">
               <h4 className="text-capitalize">
-                <div className="animate-charcter" id="word"></div>
+                <div className="animate-charcter fw-bold bg-white" id="word">
+                  {displayedText}
+                </div>
               </h4>
               <div className="text-capitalize lh-sm">
                 <h1
