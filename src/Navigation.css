@@ -1,3 +1,7 @@
+.navbar {
+  position: sticky;
+  position: -webkit-sticky;
+}
 .container ul li {
   display: inline-block;
   border-radius: 5px;

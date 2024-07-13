@@ -47,7 +47,7 @@ const Navigation = () => {
       <div className="container">
         {/* Logo */}
         <img
-          src="/src/assets/image/jha.png"
+          src="./assets/image/jha.png"
           alt="logo"
           width="80"
           className="main-logo"
