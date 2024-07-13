@@ -1,46 +1,46 @@
 import React from "react";
-import "./assets/image/bb.jpg";
-import "./assets/image/calculator.jpg";
-import "./assets/image/Tech-Business-2.webp";
-import "./assets/image/new--.jpg";
-import "./assets/image/main-image.jpg";
-import "./assets/image/wheather.jpg";
+import first from "./assets/image/bb.jpg";
+import sec from "./assets/image/calculator.jpg";
+import the from "./assets/image/Tech-Business-2.webp";
+import four from "./assets/image/new--.jpg";
+import five from "./assets/image/main-image.jpg";
+import six from "./assets/image/wheather.jpg";
 
 const portfolioItems = [
   {
     title: "1. Breaking Bad Character",
     description: "",
-    image: "/src/assets/image/bb.jpg",
+    image: first,
     link: "https://jhabreakingbad.netlify.app",
   },
   {
     title: "2. Calculator App",
     description: "",
-    image: "/src/assets/image/calculator.jpg",
+    image: sec,
     link: "https://jhapraweshcalculator.netlify.app",
   },
   {
     title: "3. Quiz App",
     description: "",
-    image: "/src/assets/image/Tech-Business-2.webp",
+    image: the,
     link: "https://jhapraweshquizapp.netlify.app",
   },
   {
     title: "4. Portfolio App",
     description: "",
-    image: "/src/assets/image/new--.jpg",
+    image: four,
     link: "https://jhaprawesh.netlify.app",
   },
   {
     title: "5. ID Generator App",
     description: "",
-    image: "/src/assets/image/main-image.jpg",
+    image: five,
     link: "https://jhapraweshapi.netlify.app",
   },
   {
     title: "6. Weather App",
     description: "",
-    image: "/src/assets/image/wheather.jpg",
+    image: six,
     link: "https://jhaweather.netlify.app",
   },
 ];

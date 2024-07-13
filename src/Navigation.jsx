@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
 import "./Navigation.css";
-import "./assets/jha.png";
+import logo from "./assets/image/jha.png";
 
 // The Navigation component
 const Navigation = () => {
@@ -46,13 +46,7 @@ const Navigation = () => {
     <nav className="navbar navbar-expand-lg" id="navbar_top">
       <div className="container">
         {/* Logo */}
-        <img
-          src="./assets/jha.png"
-          alt="logo"
-          width="80"
-          className="main-logo"
-        />
-
+        <img src={logo} alt="logo" width="80" className="main-logo" />
         {/* Button to show Offcanvas menu on small screens */}
         <button className="btn d-lg-none" type="button" onClick={handleShow}>
           <i className="fa-solid fa-bars-staggered fs-1"></i>
