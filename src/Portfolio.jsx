@@ -1,4 +1,10 @@
 import React from "react";
+import "./assets/image/bb.jpg";
+import "./assets/image/calculator.jpg";
+import "./assets/image/Tech-Business-2.webp";
+import "./assets/image/new--.jpg";
+import "./assets/image/main-image.jpg";
+import "./assets/image/wheather.jpg";
 
 const portfolioItems = [
   {

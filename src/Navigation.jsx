@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
 import "./Navigation.css";
-
 import "./assets/image/jha.png";
 
 // The Navigation component
