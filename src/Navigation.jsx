@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
 import "./Navigation.css";
-import "./assets/image/jha.png";
+import "./assets/jha.png";
 
 // The Navigation component
 const Navigation = () => {
@@ -47,7 +47,7 @@ const Navigation = () => {
       <div className="container">
         {/* Logo */}
         <img
-          src="./assets/image/jha.png"
+          src="./assets/jha.png"
           alt="logo"
           width="80"
           className="main-logo"
