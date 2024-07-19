@@ -13,15 +13,22 @@ import Footer from "./Footer";
 import SinglePage from "./SinglePage";
 import List from "./List";
 import Header from "./Header";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+import "./DarkMode.css";
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
+
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
 
   return (
-    <div className="App">
+    <div className={`${theme ? "dark-mode" : "app"} p-0`}>
       <Navigation />
+
       <Routes>
         <Route
           path="/"

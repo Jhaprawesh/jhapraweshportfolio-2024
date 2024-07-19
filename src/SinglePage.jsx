@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./Select.css";
 import { height, width } from "@fortawesome/free-solid-svg-icons/fa0";
+import BreadComponent from "./BreadComponent";
 const imageStyle = {
   width: "100%",
   height: "350px",
@@ -59,19 +60,7 @@ const SinglePage = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <ol className="breadcrumb font-weight-bold">
-              <li className="breadcrumb-item">
-                <i className="fa fa-home color-danger"></i>{" "}
-                <a href="/" class="text-decoration-none">
-                  Home
-                </a>
-              </li>
-              <li className="breadcrumb-item">
-                <a href="/blog" class="text-decoration-none">
-                  Blog
-                </a>
-              </li>
-            </ol>
+            <BreadComponent />
             <h1 style={headingStyle}>{blog.title}</h1>
             <h3>{blog.desc}</h3>
             <p className="date">

@@ -57,7 +57,7 @@ const ServiceCard = ({ title, description, image, link }) => {
       className="col-md-4 mb-3 d-flex align-items-stretch"
       data-aos="fade-up"
     >
-      <div className="card bg-danger border border-primary shadow-sm p-3 bg-body rounded">
+      <div className=" border border-primary shadow-sm p-3 rounded">
         <div className="d-flex justify-content-center flex-column align-items-center">
           <img src={image} alt={title} />
         </div>

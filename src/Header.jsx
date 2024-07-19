@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./assets/image/office.png";
+import mainImage from "./assets/image/office.png";
 
 const Header = () => {
   const words = ["HTML", "CSS", "JavaScript", "React"];
@@ -85,11 +85,7 @@ const Header = () => {
             </div>
           </div>
           <div className="col-md-6 text-center">
-            <img
-              src="/src/assets/image/office.png"
-              alt=""
-              className="img-fluid"
-            />
+            <img src={mainImage} alt="" className="img-fluid" />
           </div>
         </div>
       </div>

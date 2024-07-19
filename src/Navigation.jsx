@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
 import "./Navigation.css";
 import logo from "./assets/image/jha.png";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+import { CiLight } from "react-icons/ci";
+import { CiDark } from "react-icons/ci";
 
 // The Navigation component
 const Navigation = () => {
+  const { toggleTheme, theme } = useContext(ThemeContext);
   // State to manage the visibility of the Offcanvas menu
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   // State to keep track of the currently active link
@@ -48,9 +53,6 @@ const Navigation = () => {
         {/* Logo */}
         <img src={logo} alt="logo" width="80" className="main-logo" />
         {/* Button to show Offcanvas menu on small screens */}
-        <button className="btn d-lg-none" type="button" onClick={handleShow}>
-          <i className="fa-solid fa-bars-staggered fs-1"></i>
-        </button>
 
         {/* Navigation items for large screens */}
         <div className="collapse navbar-collapse d-none d-lg-block container">
@@ -59,31 +61,34 @@ const Navigation = () => {
           </ul>
 
           {/* Social media links */}
+
           <section className="d-lg-block d-none">
-            <a
-              className="btn text-white btn-floating m-1"
-              style={{ backgroundColor: "#ac2bac" }}
-              href="https://www.instagram.com/jha_prawesh/"
-              role="button"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
-              className="btn text-white btn-floating m-1"
-              style={{ backgroundColor: "#0082ca" }}
-              href="https://www.linkedin.com/in/prawesh-jha-54ab98215/"
-              role="button"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              className="btn text-white btn-floating m-1"
-              style={{ backgroundColor: "#333333" }}
-              href="https://github.com/Jhaprawesh"
-              role="button"
-            >
-              <i className="fab fa-github"></i>
-            </a>
+            <div className="d-lg-block d-none">
+              <a
+                className="btn text-white btn-floating m-1"
+                style={{ backgroundColor: "#ac2bac" }}
+                href="https://www.instagram.com/jha_prawesh/"
+                role="button"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                className="btn text-white btn-floating m-1"
+                style={{ backgroundColor: "#0082ca" }}
+                href="https://www.linkedin.com/in/prawesh-jha-54ab98215/"
+                role="button"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                className="btn text-white btn-floating m-1"
+                style={{ backgroundColor: "#333333" }}
+                href="https://github.com/Jhaprawesh"
+                role="button"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+            </div>
           </section>
         </div>
 
@@ -108,6 +113,19 @@ const Navigation = () => {
             </ul>
           </OffcanvasBody>
         </Offcanvas>
+        <div>
+          <button
+            onClick={toggleTheme}
+            className={`btn btn-floating m-1 ${
+              theme ? "bg-dark text-white" : "bg-white"
+            }`}
+          >
+            {theme ? <CiDark /> : <CiLight />}
+          </button>
+          <button className="btn d-lg-none" type="button" onClick={handleShow}>
+            <i className="fa-solid fa-bars-staggered fs-1"></i>
+          </button>
+        </div>
       </div>
     </nav>
   );
