@@ -9,6 +9,7 @@ function ThemeProvider({ children }) {
 
   const toggleTheme = () => {
     setTheme((prevMode) => !prevMode);
+    console.log(prevMode);
   };
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

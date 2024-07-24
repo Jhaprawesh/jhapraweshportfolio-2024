@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import mainImage from "./assets/image/office.png";
+import mainImage from "../assets/image/office.png";
 
 const Header = () => {
   const words = ["HTML", "CSS", "JavaScript", "React"];

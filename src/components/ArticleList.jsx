@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./ArticleList.css";
+import "../styles/ArticleList.css";
+import adminLogo from "../assets/image/adminLogo.png";
 
-const ArticleList = ({ articles }) => {
+const ArticleList = ({ Data }) => {
   const [visibleCount, setVisibleCount] = useState(6);
 
   const loadMore = () => {
-    setVisibleCount((prevCount) => Math.min(prevCount + 6, articles.length));
+    setVisibleCount((prevCount) => Math.min(prevCount + 6, Data.length));
   };
 
   const loadLess = () => {
@@ -19,7 +20,7 @@ const ArticleList = ({ articles }) => {
         <div className="container mt-4 mb-5" id="blog">
           <h2 className="text-capitalize text-center mt-2">My Blog</h2>
         </div>
-        {articles.slice(0, visibleCount).map((article, key) => (
+        {Data.slice(0, visibleCount).map((article, key) => (
           <div className="col-md-4 mb-5" key={key}>
             <div className="newcard">
               <Link className="newcard" to={`/blog/${article.name}`}>
@@ -33,17 +34,16 @@ const ArticleList = ({ articles }) => {
                 <div className="newcard-body">
                   <span className="tag tag-blue">Technology</span>
                   <h4>{article.title}</h4>
-                  <p>{article.content[0].substring(0, 100)}...</p>
                   <div className="user">
-                    <img src="/src/assets/image/loginimg.png" alt="" />
+                    <img src={adminLogo} alt="Admin Logo" />
                     <div className="user-info">
                       <h5>
-                        <a
+                        <Link
                           href={article.authorlink}
                           className="text-decoration-none"
                         >
                           {article.author}
-                        </a>
+                        </Link>
                       </h5>
                       <small>{article.date}</small>
                     </div>
@@ -55,9 +55,9 @@ const ArticleList = ({ articles }) => {
         ))}
       </div>
       <div className="mb-5">
-        {(visibleCount < articles.length || visibleCount > 6) && (
+        {(visibleCount < Data.length || visibleCount > 6) && (
           <div className="text-center">
-            {visibleCount < articles.length && (
+            {visibleCount < Data.length && (
               <Link to="/Blog">
                 <button className="btn btn-primary mr-2" onClick={loadMore}>
                   Load More

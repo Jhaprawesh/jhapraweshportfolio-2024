@@ -2,7 +2,7 @@ import React from "react";
 import ArticleContent from "./ArticleContent";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import "./Select.css";
+import "../styles/Select.css";
 import { height, width } from "@fortawesome/free-solid-svg-icons/fa0";
 import BreadComponent from "./BreadComponent";
 const imageStyle = {
@@ -64,7 +64,7 @@ const SinglePage = () => {
             <h1 style={headingStyle}>{blog.title}</h1>
             <h3>{blog.desc}</h3>
             <p className="date">
-              <a href={blog.authorlink} class="text-decoration-none">
+              <a href={blog.authorlink} className="text-decoration-none">
                 {blog.author}
               </a>{" "}
               {blog.date}

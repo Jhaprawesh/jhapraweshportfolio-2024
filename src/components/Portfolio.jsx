@@ -1,10 +1,10 @@
 import React from "react";
-import first from "./assets/image/bb.jpg";
-import sec from "./assets/image/calculator.jpg";
-import the from "./assets/image/Tech-Business-2.webp";
-import four from "./assets/image/new--.jpg";
-import five from "./assets/image/main-image.jpg";
-import six from "./assets/image/wheather.jpg";
+import first from "../assets/image/bb.jpg";
+import sec from "../assets/image/calculator.jpg";
+import the from "../assets/image/Tech-Business-2.webp";
+import four from "../assets/image/new--.jpg";
+import five from "../assets/image/main-image.jpg";
+import six from "../assets/image/wheather.jpg";
 
 const portfolioItems = [
   {

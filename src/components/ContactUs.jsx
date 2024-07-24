@@ -1,4 +1,5 @@
 import React from "react";
+import contImage from "../assets/image/bg.jpg";
 
 const ContactUs = () => {
   return (
@@ -8,7 +9,7 @@ const ContactUs = () => {
         <div className="col-md-6">
           <div className="image">
             <img
-              src="/src/assets/image/bg.jpg"
+              src={contImage}
               className="carou img-thumbnail"
               alt="Contact background"
             />

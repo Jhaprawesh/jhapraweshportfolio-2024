@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "react-bootstrap";
-import "./Navigation.css";
-import logo from "./assets/image/jha.png";
+import "../styles/Navigation.css";
+import logo from "../assets/image/jha.png";
 import { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
 
