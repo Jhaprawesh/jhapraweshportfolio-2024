@@ -7,7 +7,6 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { ThemeContext } from "./context/ThemeContext";
 import AppRoutes from "./routes/AppRoutes";
-import "./styles/DarkMode.css";
 import { Buffer } from "buffer";
 window.Buffer = Buffer;
 
@@ -19,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`${theme && "dark-mode"} p-0`}>
+    <div className={`${theme} p-0`}>
       <Navigation />
       <AppRoutes />
       <Footer />

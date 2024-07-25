@@ -10,6 +10,7 @@ import { CiDark } from "react-icons/ci";
 // The Navigation component
 const Navigation = () => {
   const { toggleTheme, theme } = useContext(ThemeContext);
+
   // State to manage the visibility of the Offcanvas menu
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   // State to keep track of the currently active link
@@ -115,12 +116,12 @@ const Navigation = () => {
         </Offcanvas>
         <div>
           <button
-            onClick={toggleTheme}
+            onClick={() => toggleTheme()}
             className={`btn btn-floating m-1 ${
-              theme ? "bg-dark text-white" : "bg-white"
+              theme === "dark-theme" ? "bg-dark text-white" : "bg-white"
             }`}
           >
-            {theme ? <CiDark /> : <CiLight />}
+            {theme === "dark-theme" ? <CiDark /> : <CiLight />}
           </button>
           <button className="btn d-lg-none" type="button" onClick={handleShow}>
             <i className="fa-solid fa-bars-staggered fs-1"></i>
