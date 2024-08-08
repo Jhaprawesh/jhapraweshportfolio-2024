@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import matter from "gray-matter";
 import blogData from "../../blogs.json";
 import BreadComponent from "./BreadComponent";
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 import "../styles/MarkdownStyles.css";
 
 const imageStyle = {
@@ -29,16 +28,14 @@ const SinglePage = () => {
   useEffect(() => {
     const loadMarkdown = async () => {
       try {
+        console.log(`Importing file from path: ../../blogs/${name}.md`);
         const markdown = await import(`../../blogs/${name}.md`);
         const response = await fetch(markdown.default);
         const text = await response.text();
 
-        // Parse the Markdown content
         const { content } = matter(text);
-
         setContent(content);
 
-        // Get the metadata from the JSON file
         const blogMetadata = blogData.find((blog) => blog.name === name);
         if (blogMetadata) {
           setMetadata(blogMetadata);
@@ -46,6 +43,7 @@ const SinglePage = () => {
           throw new Error("Blog metadata not found");
         }
       } catch (err) {
+        console.error("Error loading markdown:", err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -60,7 +58,7 @@ const SinglePage = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>Error loading blog post: {error}</div>;
   }
 
   return (
@@ -82,7 +80,6 @@ const SinglePage = () => {
               </div>
             </div>
             <div className="col-12 col-md-4 col-lg-6">
-              {/* Assuming BreadComponent is correctly imported */}
               <BreadComponent />
               <h1 style={headingStyle}>{metadata.title}</h1>
               <p className="date">

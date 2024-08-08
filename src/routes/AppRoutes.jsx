@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import HomePageLayout from "../components/HomePageLayout";
 // import List from "../components/BlogList";
 // import SinglePage from "../components/SinglePage";
-import NewSingle from "../components/NewSingle";
 import NewBlog from "../components/NewBlog";
+import NewSingle from "../components/NewSingle";
 
 const AppRoutes = () => (
   <Routes>
