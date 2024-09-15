@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "./Title";
 // import "./App.css"; // Ensure you have this CSS file for any custom styles
 
 const services = [
@@ -77,8 +78,12 @@ const Services = () => {
   return (
     <div className="container-fluid">
       <div className="container" id="service">
-        <div className="service row g-2 mb-3">
-          <h2 className="text-capitalize text-center pt-3">Service!</h2>
+        <div className="service row g-2 mb-3 mt-3">
+          <Title
+            title="Services!"
+            subTitle="Related To Services"
+            titleClassName="tw-text-indigo-700"
+          />
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

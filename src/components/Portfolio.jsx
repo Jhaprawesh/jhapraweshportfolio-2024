@@ -1,87 +1,48 @@
-import React from "react";
-import first from "../assets/image/bb.jpg";
-import sec from "../assets/image/calculator.jpg";
-import the from "../assets/image/Tech-Business-2.webp";
-import four from "../assets/image/new--.jpg";
-import five from "../assets/image/main-image.jpg";
-import six from "../assets/image/wheather.jpg";
-
-const portfolioItems = [
-  {
-    title: "1. Breaking Bad Character",
-    description: "",
-    image: first,
-    link: "https://jhabreakingbad.netlify.app",
-  },
-  {
-    title: "2. Calculator App",
-    description: "",
-    image: sec,
-    link: "https://jhapraweshcalculator.netlify.app",
-  },
-  {
-    title: "3. Quiz App",
-    description: "",
-    image: the,
-    link: "https://jhapraweshquizapp.netlify.app",
-  },
-  {
-    title: "4. Portfolio App",
-    description: "",
-    image: four,
-    link: "https://jhaprawesh.netlify.app",
-  },
-  {
-    title: "5. ID Generator App",
-    description: "",
-    image: five,
-    link: "https://jhapraweshapi.netlify.app",
-  },
-  {
-    title: "6. Weather App",
-    description: "",
-    image: six,
-    link: "https://jhaweather.netlify.app",
-  },
-];
-
-const PortfolioCard = ({ title, image, link }) => {
-  return (
-    <div className="mycard col-md-4 position-relative overflow-hidden ">
-      <img
-        src={image}
-        alt={title}
-        className="img-thumbnail"
-        style={{ objectFit: "cover" }}
-      />
-      <div className="overlay position-absolute top-0 start-0 bottom-0 end-0 text-white text-center w-100 h-100">
-        <div className="position-absolute top-50 start-50 translate-middle">
-          <h3 className="text-capitalize">{title}</h3>
-          <div className="d-flex justify-content-center align-content-center">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <button type="button" className="btn btn-primary">
-                <i className="bi bi-window-fullscreen"></i> Live Preview
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import React, { useState, useCallback, useMemo } from "react";
+import Button from "../components/Button";
+import Data from "../components/Data";
+import PortfolioCard from "./PortfolioCard";
+import Title from "./Title";
 
 const Portfolio = () => {
+  const [items, setItems] = useState(Data);
+
+  // Memoize menu items to avoid recalculating on every render
+  const menuItems = useMemo(
+    () => [...new Set(Data.map((val) => val.category))],
+    []
+  );
+
+  // Memoize filter function to avoid recreating on every render
+  const filterItem = useCallback((targetItem) => {
+    if (targetItem === "All") {
+      setItems(Data);
+    } else {
+      const newItem = Data.filter((item) => item.category === targetItem);
+      setItems(newItem);
+    }
+  }, []);
+
   return (
     <div className="container">
-      <div className="portfolio mb-4" id="portfolio">
-        <div className="text-center mb-5">
-          <h2>Project's</h2>
-        </div>
-        <div className="row h-50 row-gap-5" data-aos="fade-up">
-          {portfolioItems.map((item, index) => (
-            <PortfolioCard key={index} {...item} />
-          ))}
-        </div>
+      <div className="portfolio mb-4">
+        <Title
+          title={"Portfolio Showcase"}
+          subTitle={" Discover our latest projects and success stories"}
+          className={"tw-text-blue-800"}
+        />
+        <section className="tw-portfolio-section tw-py-5 tw-px-4">
+          <div className="tw-container tw-mx-auto">
+            <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-mb-8 md:tw-justify-center">
+              <Button filterItem={filterItem} menuItems={menuItems} />
+            </div>
+            <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-10">
+              {items.map((project, index) => (
+                <PortfolioCard project={project} key={project.id || index} />
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

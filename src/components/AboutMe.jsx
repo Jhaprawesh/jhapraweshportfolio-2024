@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Title from "./Title";
+import Skills from "./Skills";
 const Skill = ({ name, percent, color }) => {
   const [width, setWidth] = useState("0%");
   useEffect(() => {
@@ -25,15 +27,12 @@ const AboutMe = () => {
   return (
     <div className="about text-light pb-5" id="aboutme">
       <div className="container pt-4" data-aos="fade-up">
-        <h2 className="text-capitalize text-center">about me</h2>
+        <Title
+          title="About Me"
+          subTitle="Know More About"
+          titleClassName="tw-text-indigo-500"
+        />
         <div className="row bg-black main p-3 rounded-3 d-flex align-items-center flex-column justify-content-center">
-          <div className=" d-flex justify-content-center">
-            {/* <img
-              src="/src/assets/image/about-me.png"
-              alt=""
-              className="rounded personal-image img-fluid"
-            /> */}
-          </div>
           <div className="col-12 col-md-6 text-center md-w-100">
             <div className="fs-2 text-capitalize mt-2 text-center">
               <p>
@@ -56,6 +55,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
+        <Skills />
         <div className="row mt-3" data-aos="fade-down">
           <div className="new-skill-design">
             <div className="container-fluid" id="skills">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/ArticleList.css";
 import adminLogo from "../assets/image/adminLogo.png";
+import Title from "./Title";
 
 const ArticleList = ({ Data }) => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -18,7 +19,12 @@ const ArticleList = ({ Data }) => {
     <>
       <div className="row">
         <div className="container mt-4 mb-5" id="blog">
-          <h2 className="text-capitalize text-center mt-2">My Blog</h2>
+          <Title
+            title="Blog"
+            subTitle="Check Out Our Latest Blog Post"
+            titleClassName="tw-text-blue-700"
+            subtitleClassName="tw-text-xl tw-text-gray-700 tw-p-2"
+          />
         </div>
         {Data.slice(0, visibleCount).map((article, key) => (
           <div className="col-md-4 mb-5" key={key}>
@@ -27,7 +33,7 @@ const ArticleList = ({ Data }) => {
                 <div className="newcard-header">
                   <img
                     className="img-fluid"
-                    alt="{article.title}"
+                    alt={article.title}
                     src={article.img}
                   />
                 </div>
@@ -39,7 +45,7 @@ const ArticleList = ({ Data }) => {
                     <div className="user-info">
                       <h5>
                         <Link
-                          href={article.authorlink}
+                          to={article.authorlink}
                           className="text-decoration-none"
                         >
                           {article.author}

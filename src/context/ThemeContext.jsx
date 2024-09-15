@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
+
 const getTheme = () => {
   const theme = localStorage.getItem("theme");
   if (!theme) {

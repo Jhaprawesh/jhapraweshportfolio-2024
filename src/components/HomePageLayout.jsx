@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "./Header";
 import AboutMe from "./AboutMe";
-import Services from "./Services";
+import Header from "./Header";
 import Portfolio from "./Portfolio";
-// import BlogList from "./BlogList";
+import Services from "./Services";
 import ContactUs from "./ContactUs";
 import NewBlog from "./NewBlog";
-// import NewSingle from "./NewSingle";
 
 const HomePageLayout = () => (
   <>
@@ -14,9 +12,7 @@ const HomePageLayout = () => (
     <AboutMe />
     <Services />
     <Portfolio />
-    {/* <BlogList /> */}
     <NewBlog />
-    {/* <NewSingle /> */}
     <ContactUs />
   </>
 );
