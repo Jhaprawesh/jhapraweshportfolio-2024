@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import mainImage from "../assets/image/office.png";
+import { Button } from "@mantine/core";
 
 const Header = () => {
   const typewriterOptions = {
@@ -9,21 +10,6 @@ const Header = () => {
     autoStart: true,
     loop: true,
   };
-  // styles in object
-
-  // const styles = {
-  //   heading: {
-  //     color: "",
-  //     fontSize: "35px",
-  //   },
-  //   paragraph: {
-  //     color: "gray",
-  //   },
-  //   buttonGroup: {
-  //     display: "flex",
-  //     gap: "10px",
-  //   },
-  // };
 
   return (
     <header className="position-relative tw-bg-hero-pattern tw-bg-no-repeat tw-object-cover tw-bg-cover tw-py-20">
@@ -50,7 +36,7 @@ const Header = () => {
                 challenges. The next few sections outline some of the most
                 prominent skills for front-end developers.
               </p>
-
+              <Button variant="filled">Button</Button>
               <div className="tw-grid tw-gap-4 tw-grid-cols-2">
                 <a
                   href="./front-end.pdf"
@@ -59,6 +45,7 @@ const Header = () => {
                 >
                   Resume
                 </a>
+
                 <Link
                   to="/contact"
                   className="btn btn-outline-warning text-white"

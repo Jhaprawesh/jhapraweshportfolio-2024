@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import blogData from "../../blogs.json";
 import BreadComponent from "./BreadComponent";
 import "../styles/MarkdownStyles.css";
+import ScrollIndicator from "./ScrollIndicator";
 
 const imageStyle = {
   maxWidth: "100%",
@@ -63,6 +64,7 @@ const SinglePage = () => {
 
   return (
     <>
+      <ScrollIndicator />
       <div>
         <div
           className="py-2 px-2 py-lg-5 px-lg-5"

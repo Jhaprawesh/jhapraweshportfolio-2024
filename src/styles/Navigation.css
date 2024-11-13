@@ -6,17 +6,16 @@
   display: inline-block;
   border-radius: 5px;
 }
-.container ul li a {
+/* .container ul li a {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  color: black;
-}
-.container ul li.active {
+} */
+/* .container ul li.active {
   background-color: #3b49df;
   border-radius: 30px;
   transition: 0.3s;
-}
+} */
 .container ul li.active a {
   color: #ffffff;
 }

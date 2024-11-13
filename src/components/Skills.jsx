@@ -73,7 +73,7 @@ const skillComponent = [
 function Skills() {
   return (
     <div
-      className="tw-mt-8 tw-grid tw-grid-cols-3 tw-gap-6 md:tw-grid-cols-4 lg:tw-grid-cols-5"
+      className="tw-mt-8 tw-grid tw-grid-cols-2 tw-gap-6 md:tw-grid-cols-4 lg:tw-grid-cols-5"
       id="frameworks-integration"
     >
       {skillComponent.map((item) => (
