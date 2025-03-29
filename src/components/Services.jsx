@@ -58,13 +58,13 @@ const ServiceCard = ({ title, description, image, link }) => {
       className="col-md-4 mb-3 d-flex align-items-stretch"
       data-aos="fade-up"
     >
-      <div className=" border border-primary shadow-sm p-3 rounded">
+      <div className="border border-primary shadow-sm p-3 rounded tw-flex tw-flex-col">
         <div className="d-flex justify-content-center flex-column align-items-center">
           <img src={image} alt={title} />
         </div>
-        <div className="card-body d-flex flex-column p-0">
-          <h4 className="card-title text-center">{title}</h4>
-          <p className="card-text text-center">{description}</p>
+        <h4 className="card-title text-center mb-3">{title}</h4>
+        <p className="card-text text-center">{description}</p>
+        <div className="card-body d-flex flex-column p-0 mt-2">
           <a href={link} className="btn btn-primary mt-auto align-self-center">
             Learn More<i className="bi bi-box-arrow-in-up-right"></i>
           </a>

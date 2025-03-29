@@ -29,7 +29,6 @@
 body {
   font-family: var(--font-family);
   color: var(--text-color);
-  background-color: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -128,13 +127,6 @@ h5 {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.personal-image {
-  width: 301px;
-  height: 330px;
-  background-size: cover;
-  object-fit: cover;
-}
-
 .shadow-pop-tr {
   -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
@@ -155,21 +147,8 @@ h5 {
   background-attachment: fixed;
 }
 
-#btn-back-to-top {
-  position: fixed;
-  bottom: 10px;
-  right: 73px;
-  display: none;
-}
-
 #contactus {
   scroll-behavior: smooth;
-}
-
-.fixed-top {
-  background-color: #fff;
-  scroll-behavior: smooth;
-  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @-webkit-keyframes tracking-in-expand {

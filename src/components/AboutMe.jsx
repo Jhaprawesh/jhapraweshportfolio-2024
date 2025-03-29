@@ -1,10 +1,18 @@
 import Title from "./Title";
 import Skills from "./Skills";
+import { useMantineTheme } from "@mantine/core";
 
 const AboutMe = () => {
+  const theme = useMantineTheme();
+  const secondaryColor =
+    theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
   return (
     <>
-      <div className="about text-light pb-5" id="aboutme">
+      <div
+        className="about text-light pb-5"
+        id="aboutme"
+        style={{ color: secondaryColor, lineHeight: 1.5 }}
+      >
         <div className="container pt-4" data-aos="fade-up">
           <Title
             title="About Me"

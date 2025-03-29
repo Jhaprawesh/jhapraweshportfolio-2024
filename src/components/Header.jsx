@@ -36,7 +36,6 @@ const Header = () => {
                 challenges. The next few sections outline some of the most
                 prominent skills for front-end developers.
               </p>
-              <Button variant="filled">Button</Button>
               <div className="tw-grid tw-gap-4 tw-grid-cols-2">
                 <a
                   href="./front-end.pdf"
@@ -45,7 +44,6 @@ const Header = () => {
                 >
                   Resume
                 </a>
-
                 <Link
                   to="/contact"
                   className="btn btn-outline-warning text-white"

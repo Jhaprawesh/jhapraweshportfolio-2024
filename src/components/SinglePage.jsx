@@ -6,6 +6,7 @@ import "../styles/Select.css";
 import { height, width } from "@fortawesome/free-solid-svg-icons/fa0";
 import BreadComponent from "./BreadComponent";
 import ScrollIndicator from "./ScrollIndicator";
+
 const imageStyle = {
   width: "100%",
   height: "350px",

@@ -1,26 +1,12 @@
-import { Button, Drawer } from "@mantine/core";
+import { Burger, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import React, { useCallback, useContext, useState } from "react";
-import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "react-bootstrap";
 import { CiDark, CiLight } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/image/jha.png";
 import { ThemeContext } from "../context/ThemeContext";
 import "../styles/Navigation.css";
 import SocialMediaLinks from "./SocialMediaLinks";
-import { Burger } from "@mantine/core";
-
-function Demo() {
-  return (
-    <>
-      <Drawer opened={opened} onClose={close} title="Authentication">
-        {/* Drawer content */}
-      </Drawer>
-
-      <Button onClick={open}>Open Drawer</Button>
-    </>
-  );
-}
 
 const Navigation = () => {
   const { toggleTheme, theme } = useContext(ThemeContext);
@@ -41,21 +27,21 @@ const Navigation = () => {
   ];
 
   const renderNavItem = (link, label) => (
-    <li
-      className={`nav-item ${
-        activeLink === link
-          ? "tw-bg-[#3b49df] tw-rounded-full tw-transition-all tw-text-white tw-font-semibold"
-          : ""
-      }`}
-      key={link}
-    >
-      <a
-        href={link}
+    <li key={link} className="nav-item">
+      <NavLink
+        reloadDocument
+        to={link}
         onClick={() => handleSetActiveLink(link)}
-        className="tw-px-5 tw-py-3 tw-inline-block"
+        className={({ isActive }) =>
+          `tw-px-5 tw-py-3 tw-inline-block ${
+            isActive && activeLink === link
+              ? "tw-bg-[#3b49df] tw-rounded-full tw-transition-all tw-text-white tw-font-semibold"
+              : ""
+          }`
+        }
       >
         {label}
-      </a>
+      </NavLink>
     </li>
   );
 
@@ -66,45 +52,52 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg" id="navbar_top">
       <div className="container">
-        <Link to="/">
+        {/* Logo */}
+        <Link to="/" className="navbar-brand">
           <img src={logo} alt="logo" width="80" className="main-logo" />
         </Link>
 
-        {/* Navigation items for large screens */}
+        {/* Navigation for large screens */}
         <div className="collapse navbar-collapse d-none d-lg-block">
           <ul className="navbar-nav mx-auto">
             {navItems.map((item) => renderNavItem(item.link, item.label))}
           </ul>
-          <section className="d-lg-block d-none">
-            <SocialMediaLinks />
-          </section>
+          <SocialMediaLinks />
         </div>
+
+        {/* Mobile Menu Burger */}
         <Burger
-          className="tw-md:hidden"
+          className="d-lg-none"
           opened={openedDrawer}
           onClick={toggle}
-          aria-label="Toggle navigation"
+          aria-label="Toggle navigation menu"
         />
-        {/* Offcanvas menu for small screens */}
-        <Drawer opened={openedDrawer} onClose={toggle}>
+
+        {/* Offcanvas Drawer for small screens */}
+        <Drawer
+          opened={openedDrawer}
+          onClose={toggle}
+          title="Menu"
+          aria-labelledby="navigation-drawer"
+        >
           <ul className="navbar-nav text-center">
             {navItems.map((item) => renderNavItem(item.link, item.label))}
           </ul>
-          <section className="tw-md:hidden tw-items-center">
-            <SocialMediaLinks />
-          </section>
+          <SocialMediaLinks />
         </Drawer>
 
-        {/* Theme toggle and mobile menu button */}
-        <div>
-          <button
-            onClick={toggleTheme}
-            className={themeButtonClass}
-            aria-label="Toggle Theme"
-          >
-            {theme === "dark-theme" ? <CiDark /> : <CiLight />}
-          </button>
-        </div>
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          className={themeButtonClass}
+          aria-label="Toggle Theme"
+        >
+          {theme === "dark-theme" ? (
+            <CiDark size={24} />
+          ) : (
+            <CiLight size={24} />
+          )}
+        </button>
       </div>
     </nav>
   );

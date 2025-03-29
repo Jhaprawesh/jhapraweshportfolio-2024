@@ -11,7 +11,9 @@ export default {
   ],
   darkMode: "class",
   prefix: "tw-",
+
   theme: {
+    fontFamily: { display: ["Oswald"], body: ["Open Sans"] },
     extend: {
       backgroundImage: {
         "hero-pattern":
